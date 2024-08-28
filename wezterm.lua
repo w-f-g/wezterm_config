@@ -1,6 +1,6 @@
 local Config = require("config")
 
-require("events.window_position").setup()
+require("events.window").setup()
 
 return Config:init()
 	:append(require("config/design"))
