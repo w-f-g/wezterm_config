@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local backdrops = require("config.backdrops")
 local action = wezterm.action
 local mappings_config = {}
 
@@ -13,6 +14,19 @@ mappings_config.keys = {
 	{ key = "j", mods = "LEADER", action = action.ActivatePaneDirection("Down") },
 	{ key = "k", mods = "LEADER", action = action.ActivatePaneDirection("Up") },
 	{ key = "l", mods = "LEADER", action = action.ActivatePaneDirection("Right") },
+	{
+		key = "b",
+		mods = "LEADER",
+		action = action.InputSelector({
+			title = "Select Background",
+			choices = backdrops:choices(),
+			fuzzy = true,
+			fuzzy_description = "Select Background: ",
+			action = wezterm.action_callback(function(window, _pane, idx)
+				backdrops:set_img(window, tonumber(idx))
+			end),
+		}),
+	},
 }
 
 return mappings_config
