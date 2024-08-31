@@ -2,6 +2,7 @@ local Config = require("config")
 
 require("config.backdrops"):set_files()
 require("events.window").setup()
+require("events.config_reload").setup()
 
 return Config:init()
 		:append(require("config/design"))
