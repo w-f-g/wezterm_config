@@ -1,5 +1,6 @@
 local Config = require("config")
 
+require("config.backdrops"):set_files()
 require("events.window").setup()
 
 return Config:init()

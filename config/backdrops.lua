@@ -13,13 +13,19 @@ function BackDrops:init()
 	return backdrops
 end
 
-function BackDrops:set_files()
+--[[ function BackDrops:set_files()
 	local bg_images = {}
 	local handle = io.popen('dir /b /s "C:\\Users\\wang\\.config\\wezterm\\bg"')
 	for file in handle:lines() do
 		table.insert(bg_images, file)
 	end
 	self.files = bg_images
+	wezterm.GLOBAL.background = self.files[1]
+	return self
+end ]]
+
+function BackDrops:set_files()
+	self.files = wezterm.read_dir(wezterm.config_dir .. "\\bg")
 	wezterm.GLOBAL.background = self.files[1]
 	return self
 end
@@ -69,4 +75,4 @@ function BackDrops:set_img(window, idx)
 	self:_set_opt(window)
 end
 
-return BackDrops:init():set_files()
+return BackDrops:init()
