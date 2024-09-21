@@ -31,6 +31,10 @@ function BackDrops:set_files()
 end
 
 function BackDrops:_set_opt(window)
+	local tab_bar_bg = "#1e1e2e"
+	if wezterm.GLOBAL.background then
+		tab_bar_bg = "transparent"
+	end
 	local opts = {
 		background = {
 			{
@@ -42,6 +46,11 @@ function BackDrops:_set_opt(window)
 				height = "100%",
 				width = "100%",
 				opacity = 0.4,
+			},
+		},
+		colors = {
+			tab_bar = {
+				background = tab_bar_bg,
 			},
 		},
 	}

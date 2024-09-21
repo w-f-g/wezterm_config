@@ -17,14 +17,14 @@ window_config.show_tab_index_in_tab_bar = false
 window_config.hide_tab_bar_if_only_one_tab = true
 
 window_config.window_padding = {
-	top = 10,
-	left = 10,
-	right = 10,
-	-- bottom = 0,
+	top = 0,
+	left = 0,
+	right = 0,
+	bottom = 0,
 }
 -- 窗口透明度
 window_config.window_background_opacity = 0.9
 -- 标题栏透明度
-window_config.text_background_opacity = 0.3
+window_config.text_background_opacity = 0.9
 
 return window_config
