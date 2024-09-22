@@ -17,8 +17,15 @@ mappings_config.keys = {
 	},
 	{ key = "=", mods = "ALT", action = action.ActivateTabRelative(1) },
 	{ key = "-", mods = "ALT", action = action.ActivateTabRelative(-1) },
-	{ key = "j", mods = "ALT", action = action.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	{ key = "f", mods = "ALT", action = action.ToggleFullScreen },
+	{ key = "]", mods = "ALT", action = action.MoveTabRelative(1) },
+	{ key = "[", mods = "ALT", action = action.MoveTabRelative(-1) },
+	{ key = "k", mods = "ALT", action = action.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	{ key = "l", mods = "ALT", action = action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "LeftArrow", mods = "ALT", action = action.AdjustPaneSize({ "Left", 5 }) },
+	{ key = "RightArrow", mods = "ALT", action = action.AdjustPaneSize({ "Right", 5 }) },
+	{ key = "UpArrow", mods = "ALT", action = action.AdjustPaneSize({ "Up", 5 }) },
+	{ key = "DownArrow", mods = "ALT", action = action.AdjustPaneSize({ "Down", 5 }) },
 
 	{ key = "q", mods = "LEADER", action = action.CloseCurrentPane({ confirm = false }) },
 	{ key = "h", mods = "LEADER", action = action.ActivatePaneDirection("Left") },
@@ -37,6 +44,30 @@ mappings_config.keys = {
 				backdrops:set_img(window, tonumber(idx))
 			end),
 		}),
+	},
+}
+
+mappings_config.mouse_bindings = {
+	-- 禁用鼠标点击跳转链接
+	--[[ {
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = "NONE",
+		action = action.CompleteSelection("ClipboardAndPrimarySelection"),
+	}, ]]
+	{
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = "NONE",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
+	{
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = "CTRL",
+		action = action.OpenLinkAtMouseCursor,
+	},
+	{
+		event = { Down = { streak = 1, button = "Left" } },
+		mods = "CTRL",
+		action = wezterm.action.Nop,
 	},
 }
 
