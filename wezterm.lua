@@ -10,7 +10,7 @@ return Config
 	:init()
 	:append(require("config/design"))
 	:append(require("config/window"))
-	-- :append(require("config/launch"))
+	:append(require("config/launch"))
 	:append(require("config/domains"))
 	:append(require("config/mappings"))
 	.options

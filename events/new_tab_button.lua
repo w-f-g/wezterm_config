@@ -11,7 +11,7 @@ function M.setup()
 			window:perform_action(
 				wezterm.action.ShowLauncherArgs({
 					title = "Select/Search:",
-					flags = "FUZZY|LAUNCH_MENU_ITEMS|DOMAINS",
+					flags = "FUZZY|DOMAINS|LAUNCH_MENU_ITEMS",
 				}),
 				pane
 			)
