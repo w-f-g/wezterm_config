@@ -41,10 +41,14 @@ function BackDrops:_set_opt(window)
 				source = { Color = colors.background },
 				height = "100%",
 				width = "100%",
-				opacity = 0.4,
+				opacity = 0.3,
 			},
 		},
 	}
+	--[[ if wezterm.GLOBAL.background ~= nil then
+		opts.window_background_opacity = 0.8
+		opts.text_background_opacity = 0.8
+	end ]]
 	window:set_config_overrides(opts)
 end
 

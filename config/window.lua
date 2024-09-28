@@ -1,6 +1,7 @@
 local wezterm = require("wezterm")
 local window_config = {}
 
+-- window_config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 window_config.window_decorations = "RESIZE"
 -- 取消关闭的询问
 window_config.window_close_confirmation = "NeverPrompt"
@@ -23,6 +24,7 @@ window_config.window_padding = {
 	right = "0",
 	bottom = "0",
 }
+
 -- 窗口透明度
 window_config.window_background_opacity = 0.9
 -- 标题栏透明度
