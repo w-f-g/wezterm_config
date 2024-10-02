@@ -26,8 +26,8 @@ window_config.window_padding = {
 }
 
 -- 窗口透明度
-window_config.window_background_opacity = 0.9
+window_config.window_background_opacity = 0.8
 -- 标题栏透明度
-window_config.text_background_opacity = 0.9
+window_config.text_background_opacity = 0.8
 
 return window_config

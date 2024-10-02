@@ -3,6 +3,7 @@ local design_config = {}
 
 design_config.animation_fps = 60
 design_config.max_fps = 60
+design_config.font = wezterm.font("Fira Code")
 design_config.font_size = 16
 design_config.colors = {
 	cursor_bg = "#b718a9",

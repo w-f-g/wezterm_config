@@ -13,7 +13,9 @@ function M.setup()
 		-- local win = window:get_dimensions()
 		-- local win_width, win_height = win.pixel_width, win.pixel_height
 
-		local win_width, win_height = 2128, 1289
+		local win_width, win_height = 2160, 1236
+		-- local win_width, win_height = 2128, 1289
+
 		window:set_inner_size(win_width, win_height)
 		window:set_position((screen_width - win_width) / 2, (screen_height - win_height) / 2 - 46)
 	end)
