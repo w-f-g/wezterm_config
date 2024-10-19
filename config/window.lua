@@ -24,12 +24,24 @@ window_config.initial_rows = 30
 window_config.window_background_opacity = 0.8
 -- 标题栏透明度
 window_config.text_background_opacity = 0.8
+-- local colors = wezterm.color.get_default_colors()
+-- window_config.background = {
+-- 	{
+-- 		source = { File = "C:\\Users\\wang\\.config\\wezterm\\bg\\bg.png" },
+-- 		horizontal_align = "Center",
+-- 	},
+-- 	{
+-- 		source = { Color = colors.background },
+-- 		height = "100%",
+-- 		width = "100%",
+-- 		opacity = 0.3,
+-- 	},
+-- }
 
 if string.find(wezterm.target_triple, "windows") then
 	window_config.default_cwd = "E:\\"
 	-- 默认以 wsl 的形式开启
-	-- window_config.default_domain = "WSL:Ubuntu-24.04"
-	-- window_config.default_domain = "WSL:Arch"
+	window_config.default_domain = "WSL:Arch"
 end
 
 return window_config
