@@ -12,9 +12,10 @@ end
 
 function Config:append(new_options)
 	for k, v in pairs(new_options) do
-		if self.options[k] == nil then
-			self.options[k] = v
-		end
+		-- if self.options[k] == nil then
+		-- 	self.options[k] = v
+		-- end
+		self.options[k] = v
 	end
 	return self
 end

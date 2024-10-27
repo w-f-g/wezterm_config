@@ -45,6 +45,20 @@ mappings_config.keys = {
 			end),
 		}),
 	},
+	-- 添加子窗口
+	{
+		key = "t",
+		mods = "LEADER",
+		action = wezterm.action_callback(function(_window, _pane, _idx)
+			-- local cwd_uri = pane:get_current_working_dir()
+			-- local cwd = cwd_uri.file_path
+			wezterm.background_child_process({
+				"wezterm-gui",
+				"--config-file",
+				wezterm.config_dir .. "\\mini_wezterm.lua",
+			})
+		end),
+	},
 }
 
 mappings_config.mouse_bindings = {
