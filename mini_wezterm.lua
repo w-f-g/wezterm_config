@@ -25,18 +25,6 @@ return Config:init()
 	:append({
 		initial_cols = 80,
 		initial_rows = 24,
-		background = {
-			{
-				source = { File = "C:\\Users\\wang\\.config\\wezterm\\bg\\bg.png" },
-				horizontal_align = "Center",
-			},
-			{
-				source = { Color = "#1e1e2e" },
-				height = "100%",
-				width = "100%",
-				opacity = 0.3,
-			},
-		},
 		keys = {
 			{ key = "q", mods = "CTRL", action = action.CloseCurrentPane({ confirm = false }) },
 			{

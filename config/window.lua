@@ -24,19 +24,19 @@ window_config.initial_rows = 30
 window_config.window_background_opacity = 0.8
 -- 标题栏透明度
 window_config.text_background_opacity = 0.8
--- local colors = wezterm.color.get_default_colors()
--- window_config.background = {
--- 	{
--- 		source = { File = "C:\\Users\\wang\\.config\\wezterm\\bg\\bg.png" },
--- 		horizontal_align = "Center",
--- 	},
--- 	{
--- 		source = { Color = "#1e1e2e" },
--- 		height = "100%",
--- 		width = "100%",
--- 		opacity = 0.3,
--- 	},
--- }
+
+window_config.background = {
+	{
+		source = { File = "C:\\Users\\wang\\.config\\wezterm\\bg\\bg.png" },
+		horizontal_align = "Center",
+	},
+	{
+		source = { Color = "#1e1e2e" },
+		height = "100%",
+		width = "100%",
+		opacity = 0.3,
+	},
+}
 
 if string.find(wezterm.target_triple, "windows") then
 	window_config.default_cwd = "E:\\"

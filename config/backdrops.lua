@@ -1,5 +1,5 @@
 local wezterm = require("wezterm")
-local colors = wezterm.color.get_default_colors()
+-- local colors = wezterm.color.get_default_colors()
 local BackDrops = {}
 BackDrops.__index = BackDrops
 
@@ -71,11 +71,12 @@ function BackDrops:set_img(window, idx)
 	end
 
 	self.current_idx = idx
-	if idx == 1 then
-		wezterm.GLOBAL.background = nil
-	else
-		wezterm.GLOBAL.background = self.files[idx]
-	end
+	-- if idx == 1 then
+	-- 	wezterm.GLOBAL.background = nil
+	-- else
+	-- 	wezterm.GLOBAL.background = self.files[idx]
+	-- end
+	wezterm.GLOBAL.background = self.files[idx]
 	self:_set_opt(window)
 end
 
