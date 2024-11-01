@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local M = {}
 
 function M.setup()
-	-- 全屏状态下修改背景图片顶部会出现白边
+	-- 全屏状态下修改背景图片顶部会出现白边，最小化然后重新最大化就会恢复正常
 	wezterm.on("window-config-reloaded", function(window, pane)
 		local screen = wezterm.gui.screens()
 		local screen_width = screen.virtual_width
