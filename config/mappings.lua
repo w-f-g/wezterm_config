@@ -7,6 +7,7 @@ mappings_config.leader = { key = "a", mods = "CTRL", timeout_Milliseconds = 1000
 mappings_config.keys = {
 	-- { key = "", mods = "", action = action. },
 	{ key = "q",          mods = "CTRL",   action = action.QuitApplication },
+	-- 创建新的标签
 	{
 		key = "n",
 		mods = "ALT",
@@ -15,23 +16,30 @@ mappings_config.keys = {
 			flags = "FUZZY|LAUNCH_MENU_ITEMS|DOMAINS",
 		}),
 	},
+	-- 标签切换
 	{ key = "=",          mods = "ALT",    action = action.ActivateTabRelative(1) },
 	{ key = "-",          mods = "ALT",    action = action.ActivateTabRelative(-1) },
 	{ key = "f",          mods = "ALT",    action = action.ToggleFullScreen },
+	-- 标签移动
 	{ key = "]",          mods = "ALT",    action = action.MoveTabRelative(1) },
 	{ key = "[",          mods = "ALT",    action = action.MoveTabRelative(-1) },
+	-- 向下分屏
 	{ key = "k",          mods = "ALT",    action = action.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	-- 向右分屏
 	{ key = "l",          mods = "ALT",    action = action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	-- 分屏宽高移动
 	{ key = "LeftArrow",  mods = "ALT",    action = action.AdjustPaneSize({ "Left", 5 }) },
 	{ key = "RightArrow", mods = "ALT",    action = action.AdjustPaneSize({ "Right", 5 }) },
 	{ key = "UpArrow",    mods = "ALT",    action = action.AdjustPaneSize({ "Up", 5 }) },
 	{ key = "DownArrow",  mods = "ALT",    action = action.AdjustPaneSize({ "Down", 5 }) },
 
 	{ key = "q",          mods = "LEADER", action = action.CloseCurrentPane({ confirm = false }) },
+	-- 光标位置切换
 	{ key = "h",          mods = "LEADER", action = action.ActivatePaneDirection("Left") },
 	{ key = "j",          mods = "LEADER", action = action.ActivatePaneDirection("Down") },
 	{ key = "k",          mods = "LEADER", action = action.ActivatePaneDirection("Up") },
 	{ key = "l",          mods = "LEADER", action = action.ActivatePaneDirection("Right") },
+	-- 切换背景图片
 	{
 		key = "b",
 		mods = "LEADER",
