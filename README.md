@@ -1,6 +1,7 @@
 # 简介
 
 **Wezterm** 终端模拟器配置，目前只适配了 windows，还没用过其他系统，不知道在其他系统上效果是啥样的。
+在 Windows 系统中，需要将配置文件放置在 `C:\Users\you_username\.config` 目录下。
 
 # 快捷键
 
