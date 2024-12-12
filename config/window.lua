@@ -27,7 +27,7 @@ window_config.text_background_opacity = 0.8
 
 window_config.background = {
 	{
-		source = { File = "C:\\Users\\wang\\.config\\wezterm\\bg\\bg_01.png" },
+		source = { File = "C:\\Users\\wang\\.config\\wezterm\\bg\\bg_01.jpg" },
 		horizontal_align = "Center",
 	},
 	{
@@ -41,7 +41,7 @@ window_config.background = {
 if string.find(wezterm.target_triple, "windows") then
 	window_config.default_cwd = "E:\\"
 	-- 默认以 wsl 的形式开启
-	-- window_config.default_domain = "WSL:Arch"
+	window_config.default_domain = "WSL:Arch"
 end
 
 return window_config
