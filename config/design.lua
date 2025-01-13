@@ -11,6 +11,8 @@ design_config.colors = {
 		background = "#1e1e2e",
 	},
 }
+
+-- 见 https://github.com/catppuccin/wezterm
 design_config.color_scheme = "Catppuccin Mocha"
 design_config.default_cursor_style = "BlinkingBlock"
 design_config.cursor_blink_rate = 500

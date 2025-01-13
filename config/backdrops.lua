@@ -41,7 +41,7 @@ function BackDrops:_set_opt(window)
 				source = { Color = "#1e1e2e" },
 				height = "100%",
 				width = "100%",
-				opacity = 0.3,
+				opacity = 0.4,
 			},
 		},
 	}

@@ -20,9 +20,9 @@ window_config.window_padding = {
 window_config.initial_cols = 118
 window_config.initial_rows = 30
 
--- 窗口透明度
+-- 窗口不透明度
 window_config.window_background_opacity = 0.8
--- 标题栏透明度
+-- 文本背景不透明度
 window_config.text_background_opacity = 0.8
 
 window_config.background = {
@@ -34,7 +34,7 @@ window_config.background = {
 		source = { Color = "#1e1e2e" },
 		height = "100%",
 		width = "100%",
-		opacity = 0.3,
+		opacity = 0.4,
 	},
 }
 
