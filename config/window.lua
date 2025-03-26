@@ -20,28 +20,28 @@ window_config.window_padding = {
 window_config.initial_cols = 118
 window_config.initial_rows = 30
 
--- 窗口透明度
+-- 窗口不透明度
 window_config.window_background_opacity = 0.8
--- 标题栏透明度
+-- 文本背景不透明度
 window_config.text_background_opacity = 0.8
 
 window_config.background = {
 	{
-		source = { File = "C:\\Users\\wang\\.config\\wezterm\\bg\\bg_01.jpg" },
+		source = { File = "C:\\Users\\strange\\.config\\wezterm\\bg\\bg_01.jpg" },
 		horizontal_align = "Center",
 	},
 	{
 		source = { Color = "#1e1e2e" },
 		height = "100%",
 		width = "100%",
-		opacity = 0.3,
+		opacity = 0.4,
 	},
 }
 
 if string.find(wezterm.target_triple, "windows") then
-	window_config.default_cwd = "E:\\"
+	window_config.default_cwd = "D:\\"
 	-- 默认以 wsl 的形式开启
-	window_config.default_domain = "WSL:Arch"
+window_config.default_domain = "WSL:Arch"
 end
 
 return window_config

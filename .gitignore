@@ -1,2 +1,4 @@
 bg/*
+!bg/bg_*.jpg
 !bg/bg_*.png
+!bg/bg_*.gif
