@@ -58,17 +58,31 @@ mappings_config.keys = {
 	{
 		key = "t",
 		mods = "LEADER",
-		action = wezterm.action_callback(function(_window, _pane, _idx)
-			-- local cwd_uri = pane:get_current_working_dir()
-			-- local cwd = cwd_uri.file_path
-			local mini_wezterm_path = platform.is_win and "\\mini_wezterm.lua" or "/mini_wezterm.lua"
-			wezterm.background_child_process({
-				"wezterm-gui",
-				"--config-file",
-				wezterm.config_dir .. mini_wezterm_path,
-			})
+		action = wezterm.action_callback(function(_window, pane, _idx)
+			if not platform.is_win then
+				local cwd_uri = pane:get_current_working_dir()
+				local cwd = cwd_uri.file_path
+				wezterm.mux.spawn_window({ cwd = cwd, width = 60, height = 20 })
+			else
+				local mini_wezterm_path = platform.is_win and "\\mini_wezterm.lua" or "/mini_wezterm.lua"
+				wezterm.background_child_process({
+					"wezterm-gui",
+					"--config-file",
+					wezterm.config_dir .. mini_wezterm_path,
+				})
+			end
 		end),
 	},
+	-- 切换全屏
+	{
+		key = "f",
+		mods = "ALT",
+		action = action.ToggleFullScreen,
+	},
+	-- 向上滚动
+	{ key = "UpArrow", mods = "ALT", action = action.ScrollByLine(-14) },
+	-- 向下滚动
+	{ key = "DownArrow", mods = "ALT", action = action.ScrollByLine(14) },
 }
 
 mappings_config.mouse_bindings = {
