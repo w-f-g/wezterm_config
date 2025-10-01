@@ -1,7 +1,7 @@
 local platform = require("utils.platform")
 
 local options = {
-	default_prog = {},
+	-- default_prog = {},
 	launch_menu = {},
 }
 

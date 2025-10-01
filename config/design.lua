@@ -1,9 +1,14 @@
 local wezterm = require("wezterm")
+local platform = require("utils.platform")
 local design_config = {}
 
 design_config.animation_fps = 60
 design_config.max_fps = 60
-design_config.font = wezterm.font("FiraCode Nerd Font")
+design_config.font = wezterm.font(
+	platform.is_win
+		and "FiraCode Nerd Font"
+		or "JetBrainsMono Nerd Font Mono"
+)
 design_config.font_size = 16
 design_config.colors = {
 	cursor_bg = "#b718a9",

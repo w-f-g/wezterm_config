@@ -8,6 +8,8 @@ function tab_title(tab_info)
 	local title = pane.domain_name
 	if title == "local" and platform.is_win then
 		title = "cmd"
+	else
+		title = tab_info.tab_index + 1
 	end
 
 	return title

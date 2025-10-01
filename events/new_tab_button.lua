@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local platform = require("utils.platform")
 local M = {}
 
 function M.setup()
@@ -8,7 +9,7 @@ function M.setup()
 			window:perform_action(default_action, pane)
 		end
 
-		if default_action and button == "Right" then
+		if platform.is_win and default_action and button == "Right" then
 			window:perform_action(
 				wezterm.action.ShowLauncherArgs({
 					title = "Select/Search:",

@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local platform = require("utils.platform")
 -- local colors = wezterm.color.get_default_colors()
 local BackDrops = {}
 BackDrops.__index = BackDrops
@@ -25,7 +26,8 @@ end
 end ]]
 
 function BackDrops:set_files()
-	self.files = wezterm.read_dir(wezterm.config_dir .. "\\bg")
+	local bg_path = platform.is_win and "\\bg" or "/bg"
+	self.files = wezterm.read_dir(wezterm.config_dir .. bg_path)
 	wezterm.GLOBAL.background = self.files[1]
 	return self
 end
